@@ -14,8 +14,6 @@ export class NotificationListComponent implements OnInit {
   
   ngOnInit(): void {
     this.toastCount = this.notifications.length;
-    console.log(this.notifications, this.toastCount);
-    this.notifications = [];
   }
 
   toastAction(toast: any, id: number, action: string) {
@@ -27,6 +25,6 @@ export class NotificationListComponent implements OnInit {
       const index = this.notifications.indexOf(toast);
       if (index !== -1) { this.notifications.splice(index, 1); }
     }
-    console.log(id, action, collection);
+    // console.log(id, action, collection);
   }
 }
