@@ -20,3 +20,9 @@ export interface Attachments {
   name: string;
   url: string;
 }
+
+export interface ToastAction {
+  toast: any;
+  id: number;
+  action: string
+}

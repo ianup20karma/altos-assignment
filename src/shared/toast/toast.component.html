@@ -1,0 +1,17 @@
+<div class="toast">
+    <div class="textAndDesc">
+        <span #msg class="titleToast{{index}}" title="{{toast.message}}">
+            {{ toast.message }}
+        </span>&nbsp;&nbsp;
+        <span class="description" *ngIf="toast.description; else noDescription">
+            {{ toast.description }}
+        </span>
+        <ng-template class="description" #noDescription>
+            <span class="description"> No description </span>
+        </ng-template>
+    </div>
+    <span>
+        <i *ngIf="!toast.read" (click)="toastAction(toast, index, 'check')" class="pi pi-check"></i>&nbsp;
+        <i (click)="toastAction(toast, index, 'delete')" class="pi pi-times"></i>
+    </span>
+</div>
