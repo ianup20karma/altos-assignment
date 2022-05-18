@@ -1,8 +1,9 @@
-export interface Notifications {
+export interface Notification {
   actions?: Actions[] | null;
   description?: string | null;
   from: From;
   message: string;
+  read: boolean;
   attachments?: Attachments[] | null;
 }
 export interface Actions {
