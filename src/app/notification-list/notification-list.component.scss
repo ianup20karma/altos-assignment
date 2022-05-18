@@ -1,0 +1,39 @@
+i {
+    // float: right;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.accordionClass {
+    width: 400px;
+}
+
+.toast {
+    margin: 10px;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.textAndDesc {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 270px;
+}
+
+.description {
+    font-size: 10px;
+    display: block;
+    color: grey;
+    font-style: italic;
+}
+
+.noToasts {
+    font-size: 30px;
+    display: flex;
+    text-align: center;
+    font-weight: 500;
+}

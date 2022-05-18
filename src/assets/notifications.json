@@ -1,0 +1,48 @@
+[
+  {
+    "actions": [
+      {
+        "config": {
+          "label": "No"
+        },
+        "control": "button"
+      },
+      {
+        "config": {
+          "label": "Yes"
+        },
+        "control": "button"
+      }
+    ],
+    "description": "Should we allow this",
+    "from": {
+      "name": "User 1"
+    },
+    "message": "Employees want to work from home"
+  },
+  {
+    "actions": [
+      {
+        "config": {},
+        "control": "file"
+      }
+    ],
+    "description": "Upload the file here",
+    "from": {
+      "name": "User 1"
+    },
+    "message": "Upload the invoice"
+  },
+  {
+    "attachments": [
+      {
+        "name": "report.pdf",
+        "url": "https://files.server.com/report.pdf"
+      }
+    ],
+    "from": {
+      "name": "User 2"
+    },
+    "message": "Here is the report"
+  }
+]

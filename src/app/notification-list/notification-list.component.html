@@ -1,0 +1,36 @@
+<div class="accordionClass">
+  <p-accordion>
+    <p-accordionTab header="Notifications ({{ notifications.length }})">
+      <div *ngIf="notifications.length != 0; else emptyBlock">
+        <div class="toastParentBox" *ngFor="let toast of notifications; let i = index">
+          <div class="toast">
+              <div class="textAndDesc">
+                  <span #msg class="titleToast{{i}}" title="{{toast.message}}">
+                    {{ toast.message }}
+                  </span>&nbsp;&nbsp;
+                  <span
+                  class="description"
+                  *ngIf="toast.description; else noDescription"
+                  >
+                  {{ toast.description }}
+                  </span>
+                  <ng-template class="description" #noDescription>
+                      <span class="description"> No description </span>
+                  </ng-template>
+              </div>
+            <span>
+                <i (click)="toastAction(toast, i, 'check')" class="pi pi-check"></i>&nbsp;
+                <i (click)="toastAction(toast, i, 'delete')" class="pi pi-times"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <ng-template #emptyBlock>
+          <span class="noToasts">
+              No New Notifications available at the moment !
+          </span>
+        </ng-template
+      >
+    </p-accordionTab>
+  </p-accordion>
+</div>
