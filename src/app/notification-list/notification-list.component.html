@@ -1,6 +1,6 @@
 <div class="accordionClass">
   <p-accordion>
-    <p-accordionTab header="Notifications ({{ notifications.length }})">
+    <p-accordionTab header="Notifications ({{ toastCount }})">
       <div *ngIf="notifications.length != 0; else emptyBlock">
         <div class="toastParentBox" *ngFor="let toast of notifications; let i = index">
           <div class="toast">
