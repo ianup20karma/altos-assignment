@@ -13,6 +13,12 @@ i {
     justify-content: space-between;
 }
 
+.avatar {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
 .textAndDesc {
     overflow: hidden;
     white-space: nowrap;

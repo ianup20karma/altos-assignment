@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { ToastAction } from 'src/app/models/notification-list.interface';
+import { ToastAction } from 'src/models/notification-list.interface';
 @Component({
   selector: 'app-toast',
   templateUrl: './toast.component.html',

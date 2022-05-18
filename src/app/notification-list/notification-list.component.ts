@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import Notifications from '../../assets/notifications.json';
-import { ToastAction } from '../models/notification-list.interface';
 
 @Component({
   selector: 'app-notification-list',
