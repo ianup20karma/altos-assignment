@@ -10,11 +10,7 @@ export class ToastComponent {
   @Input() index: number = 0;
   @Output() toastActionEvent = new EventEmitter<ToastAction>();
 
-  toastAction(toast: any, id: number, action: string) {
-    const toastAction: ToastAction = Object.create({});
-    toastAction.toast = toast;
-    toastAction.id = id;
-    toastAction.action = action;
+  toastAction(toastAction: ToastAction) {
     this.toastActionEvent.emit(toastAction);
   }
 }

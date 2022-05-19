@@ -18,11 +18,11 @@ export class NotificationListComponent implements OnInit {
     const collection = document.getElementsByClassName('titleToast' + event.id)[0];
     const index = this.notifications.indexOf(event.toast);
     if (index !== -1) {
-      if (event.action == 'check' && !this.notifications[index].read) {
+      if (event.action == 'check' || event.action == 'file' && !this.notifications[index].read) {
         collection.setAttribute('style', 'font-weight: 400;');
         this.toastCount -= 1;
         this.notifications[index].read = true;
-      } else {
+      } else if (event.action == 'delete') {
         this.notifications.splice(index, 1);
       }
     }

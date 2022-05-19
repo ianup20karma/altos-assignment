@@ -1,9 +1,3 @@
-i {
-    // float: right;
-    margin: 5px;
-    cursor: pointer;
-}
-
 .toast {
     margin: 10px;
     color: black;
@@ -31,4 +25,8 @@ i {
     display: block;
     color: grey;
     font-style: italic;
+}
+
+.attachments {
+    cursor: pointer;
 }
