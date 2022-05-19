@@ -1,15 +1,19 @@
-<span *ngFor="let action of toast.actions">
-    <span *ngIf="action.control == 'button'">
-        <i  *ngIf="action.config.label == 'No'" (click)="toastAction(toast, index, 'delete')"
-            class="pi pi-times"></i>
-        <i *ngIf="action.config.label == 'Yes'" (click)="toastAction(toast, index, 'check')"
-            class="pi pi-check"></i>
+<div *ngIf="toast.actions; else attachments">
+    <span *ngFor="let action of toast.actions">
+        <span *ngIf="action.control == 'button'">
+            <i  *ngIf="action.config.label == 'No'" (click)="toastAction(toast, index, 'delete')"
+                class="pi pi-times"></i>
+            <i *ngIf="action.config.label == 'Yes'" (click)="toastAction(toast, index, 'check')"
+                class="pi pi-check"></i>
+        </span>
+        <i *ngIf="action.control == 'file' && action.config" (click)="toastAction(toast, index, 'file')"
+            class="pi pi-file"></i>
     </span>
-    <i *ngIf="action.control == 'file' && action.config" (click)="toastAction(toast, index, 'file')"
-        class="pi pi-file"></i>
-</span>
-<span *ngFor="let attachment of toast.attachments">
-    <a href="{{attachment.url}}">
-        <i class="attachment" title="{{attachment.name}}" (click)="toastAction(toast, index, 'file')" class="pi pi-file"></i>
-    </a>
-</span>
+</div>
+<ng-template #attachments>
+    <span *ngFor="let attachment of toast.attachments">
+        <a href="{{attachment.url}}">
+            <i class="attachment" title="{{attachment.name}}" (click)="toastAction(toast, index, 'file')" class="pi pi-file"></i>
+        </a>
+    </span>
+</ng-template>
