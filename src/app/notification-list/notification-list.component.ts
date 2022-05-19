@@ -9,7 +9,7 @@ import Notifications from '../../assets/notifications.json';
 export class NotificationListComponent implements OnInit {
   notifications = Notifications;
   toastCount = 0;
-  toastReadValue: {read: boolean}[] = [];
+  toastReadValue: { read: boolean }[] = [];
 
   ngOnInit(): void {
     this.toastCount = this.notifications.length;

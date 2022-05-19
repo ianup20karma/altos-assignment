@@ -18,8 +18,7 @@
     "from": {
       "name": "User 1"
     },
-    "message": "Employees want to work from home",
-    "read": false
+    "message": "Employees want to work from home"
   },
   {
     "actions": [
@@ -32,8 +31,7 @@
     "from": {
       "name": "User 1"
     },
-    "message": "Upload the invoice",
-    "read": false
+    "message": "Upload the invoice"
   },
   {
     "attachments": [
@@ -45,7 +43,6 @@
     "from": {
       "name": "User 2"
     },
-    "message": "Here is the report",
-    "read": false
+    "message": "Here is the report"
   }
 ]
